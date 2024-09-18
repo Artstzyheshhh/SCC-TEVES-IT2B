@@ -31,6 +31,7 @@ public class receipt {
          System.out.println("Total due :"+(quant*price));
          System.out.println("Cash :"+cash);
          System.out.println("-------------------------------");
-         System.out.println("Change :"+(cash-(quant*price));
+         int change = cash - (quant*price);
+         System.out.println("change :"+ change);
 }
 }
