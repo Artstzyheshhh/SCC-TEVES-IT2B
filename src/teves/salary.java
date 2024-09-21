@@ -14,7 +14,7 @@ public void getsals(){
     for(int i=0; i<emp; i++){
         
         sr[i] = new salaries();
-        
+        System.out.printf("--------------------------------------------------------------------------------------------\n");
         System.out.println("Enter details of employee "+(i+1)+": ");
         System.out.print("Enter ID:");
         String eid = sc.next();
@@ -30,10 +30,15 @@ public void getsals(){
         
        sr[i].addsala(eid , name, rate , hour, deduct);
     }
+        System.out.printf("\n--------------------------------------------------------------------------------------------\n");
+        System.out.printf("| %-10s | %-10s | %-10s | %-10s | %-10s | %-10s | %-10s |",
+      "ID", "NAME" , "RATE" , "HOURS" , "GROSS" ,"DEDUCT","NETPAY") ;   
+        System.out.printf("\n--------------------------------------------------------------------------------------------");
       for(int i=0; i<emp; i++){
     sr[i].viewsala();
+     
     }
-    
+     System.out.printf("\n--------------------------------------------------------------------------------------------");
     
 }
 

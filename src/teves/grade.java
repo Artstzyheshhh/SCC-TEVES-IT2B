@@ -3,7 +3,7 @@ package teves;
 import java.util.Scanner;
 public class grade{
 
-public void getaccnt(){  
+public void getgrade(){  
     Scanner sc = new Scanner(System.in);
     grades[] grds = new grades [100];
    
@@ -14,7 +14,7 @@ public void getaccnt(){
     for(int i=0; i<g; i++){
         
         grds[i] = new grades();
-        
+        System.out.printf("---------------------------------------------------------------------------------------------------------\n");
         System.out.println("Enter details of students "+(i+1)+": ");
         System.out.print("Enter ID:");
         int id = sc.nextInt();
@@ -31,12 +31,15 @@ public void getaccnt(){
         
         grds[i].addgrades(name, id, p ,m ,pf, f);
     }
+     System.out.printf("\n---------------------------------------------------------------------------------------------------------\n");
+     System.out.printf("| %-10s | %-10s | %-10s | %-10s | %-10s | %-10s | %-10s | %-10s |",
+      "NAME", "ID" , "PRELIM" , "MIDTERM" , "PREFI" ,"FINALS","AVERAGE","REMARKS") ;   
+     System.out.printf("\n---------------------------------------------------------------------------------------------------------");
       for(int i=0; i<g; i++){
       grds[i].viewgrades();
       
-      
       }
-    
+    System.out.printf("\n---------------------------------------------------------------------------------------------------------\n");
     }
     
     

@@ -19,12 +19,11 @@ public class grades {
       
       double total =  this.p + this.m + this.pf + this.f;
       double average = total/4;
-      String remarks = (average> 3.0) ? "failed": "passed";
+      String remarks = (average> 3.0) ? "failed" : "passed";
       
-      System.out.printf("| %-10s | %-10s | %-10s | %-10s | %-10s | %-10s | %-10s | %-10s |",
-      "NAME", "ID" , "PRELIM" , "MIDTERM" , "PREFI" ,"FINALS","AVERAGE","REMARKS") ;    
-      System.out.printf("\n| %-10s | %-10d | %-10.2f | %-10.2f | %-10.2f | %-10.2f | %-10.2f | %-10s |\n",
-      this.name , this.id , this.p, this.m , this.pf , this.f) ;
+      
+      System.out.printf("\n| %-10s | %-10d | %-10.2f | %-10.2f | %-10.2f | %-10.2f | %-10.2f | %-10s |",
+      this.name , this.id , this.p, this.m , this.pf , this.f, average,remarks) ;
   
   }
   

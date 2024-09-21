@@ -17,8 +17,7 @@ public class salaries {
       double gross = rate*hour;
       double netp = gross - deduct;
       
-      System.out.printf("| %-10s | %-10s | %-10s | %-10s | %-10s | %-10s | %-10s |",
-      "ID", "NAME" , "RATE" , "HOURS" , "GROSS" ,"DEDUCT","NETPAY") ;    
+        
       System.out.printf("\n| %-10s | %-10s | %-10.2f | %-10d | %-10.2f | %-10.2f | %-10.2f |",
       this.eid , this.name , this.rate , this.hour , gross , this.deduct ,netp) ;
   
