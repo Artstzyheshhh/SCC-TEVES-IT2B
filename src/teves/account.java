@@ -4,11 +4,9 @@ import java.util.Scanner;
 
 public class account {
 Scanner sc = new Scanner(System.in);
+accounts[] acc = new accounts[100];
 public void getaccnt(){  
    
-    accounts[] acc = new accounts[100];
-   
-    
     System.out.print("Enter no of accounts: ");
     int accnt = sc.nextInt();
     
@@ -19,9 +17,9 @@ public void getaccnt(){
         System.out.println("Enter details of account "+(i+1)+": ");
         System.out.print("Enter ID: ");
         int id = sc.nextInt();
-        while(duplicateVerify(id, i)){
-            i--;
-            
+         if(duplicateVerify(id, i)){
+                i--;
+                continue;
             }
         System.out.print("Enter last name: ");
         String last = sc.next();
@@ -32,7 +30,7 @@ public void getaccnt(){
         System.out.print("Enter username: ");
         String user = sc.next();
         
-        System.out.printf("\n-------------------------------------------------------------------------------");
+        System.out.printf("-------------------------------------------------------------------------------");
         System.out.println("\nPASSWORD CRITERIA"
                     + "\n1. Must be above 8 characters"
                     + "\n2. Must have at least 1 upper & 1 lower case letters"
@@ -60,22 +58,16 @@ public void getaccnt(){
       }
      System.out.printf("\n-------------------------------------------------------------------------------");
     }
-
-private boolean duplicateVerify(int id, int index) {
-        accounts[] acc = new accounts[100];
-            
-        for (int j = 0; j < index; j++) {
-             acc[j] = new accounts();
-            if (id == acc[j].id) {
-                System.out.println("Duplicated ID, try again: ");
-                
-               return false; 
-            }
+   private boolean duplicateVerify(int Id, int index){
+        for(int j = 0; j < index; j++){
+            if(Id==acc[j].nid){
+                System.out.println("\nInput invalid, must not match an existing ID.");
+                return true;
+            } 
         }
         return false;
-    }
+    }     
 
-  
 
 
 private boolean passwordVerify(String password){

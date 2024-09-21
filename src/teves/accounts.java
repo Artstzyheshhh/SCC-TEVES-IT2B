@@ -2,9 +2,9 @@ package teves;
 
 public class accounts {
    String last, first, email, user, pass; 
-   int id;
-  public void addaccounts(int sid,String slast,String sfirst,String semail,String suser,String spass){
-      this.id = sid;
+   int nid;
+  public void addaccounts(int Id,String slast,String sfirst,String semail,String suser,String spass){
+      this.nid = Id;
       this.last = slast;
       this.first= sfirst;
       this.email= semail;
@@ -15,7 +15,7 @@ public class accounts {
       
       
       System.out.printf("\n %-10d | %-10s | %-10s | %-10s | %-10s | %-10s ",
-      this.id , this.last , this.first, this.email , this.user , this.pass) ;
+      this.nid , this.last , this.first, this.email , this.user , this.pass) ;
   
   }
   
